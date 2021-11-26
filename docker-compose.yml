@@ -3,12 +3,13 @@ version: '3.4'
 networks:
   k6:
   grafana:
+  django:
+    external: true
+    name: csci220-django_default
 
 services:
   influxdb:
     image: influxdb:1.8
-#    entrypoint: /bin/sh
-#    user: root
     networks:
       - k6
       - grafana
@@ -19,8 +20,6 @@ services:
 
   grafana:
     image: grafana/grafana:latest
-#    entrypoint: /bin/sh
-#    user: root
     networks:
       - grafana
     ports:
@@ -36,10 +35,9 @@ services:
 
   k6:
     image: loadimpact/k6:latest
-#    entrypoint: /bin/sh
-#    user: root
     networks:
       - k6
+      - django
     ports:
       - "6565:6565"
     environment:

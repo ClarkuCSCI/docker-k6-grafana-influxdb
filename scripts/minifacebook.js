@@ -7,7 +7,7 @@ export let options = {
       { duration: "5s", target: 5 },
 
       // Stay at rest on 5 VUs for 10s
-      { duration: "10s", target: 5 },
+      { duration: "20s", target: 5 },
 
       // Ramp-down from 5 to 0 VUs for 5s
       { duration: "5s", target: 0 }
@@ -15,7 +15,7 @@ export let options = {
 };
 
 export default function () {
-  const response = http.get("https://swapi.dev/api/people/30/", {headers: {Accepts: "application/json"}});
+  const response = http.get("http://nginx/minifacebook/");
   check(response, { "status is 200": (r) => r.status === 200 });
   sleep(.300);
 };
