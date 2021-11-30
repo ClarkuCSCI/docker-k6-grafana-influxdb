@@ -4,7 +4,7 @@ Demonstrates how to run load tests with containerized instances of [k6](https://
 ## Getting Started
 First, ensure that you have Docker [installed](https://docs.docker.com/get-docker/) and running on your computer.
 
-Next, start the containers in [the csci220-django project](https://github.com/ClarkuCSCI/csci220-django). We will be load testing <http://127.0.0.1:8080/minifacebook/>, so **be sure you can load that page** before continuing.
+Next, start the containers in [the csci220-django project](https://github.com/ClarkuCSCI/csci220-django). We will be load testing <http://127.0.0.1:8080/minifacebook/>, so **be sure you can load that page** before continuing. Also, ensure that the page shows users' statuses: if you don't see any statuses, you should run `add_fb_bots.py`, as described in the "Query Processing and Optimization" lab.
 
 Next, start the [InfluxDB](https://www.influxdata.com) and [Grafana](https://grafana.com) containers by running:
 ```
