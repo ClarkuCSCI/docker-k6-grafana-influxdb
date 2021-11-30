@@ -18,6 +18,7 @@ Finally, run the load testing script:
 ```
 docker compose run --rm k6 run /scripts/minifacebook.js
 ```
+As the script runs, results will appear in the graph dashboard.
 
 ## Article
 This is the accompanying source code for [this article](https://medium.com/swlh/beautiful-load-testing-with-k6-and-docker-compose-4454edb3a2e3). Please read for a detailed breakdown of the code and how K6, Grafana and InfluxDB work together using Docker Compose.
