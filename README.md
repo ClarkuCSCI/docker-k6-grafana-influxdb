@@ -10,7 +10,9 @@ Next, start the [InfluxDB](https://www.influxdata.com) and [Grafana](https://gra
 ```
 docker compose up -d influxdb grafana
 ```
-These containers will record and display metrics on load testing, respectively. Open <http://localhost:3000/d/k6/k6-load-testing-results> to view the graph dashboard. Since you haven't yet run any tests, the dashboard won't yet contain any data.
+These containers will record and display metrics on load testing, respectively. 
+
+Open <http://localhost:3000/d/k6/k6-load-testing-results> to view the graph dashboard. Since you haven't yet run any tests, the dashboard won't yet contain any data.
 
 Finally, run the load testing script:
 ```
@@ -18,9 +20,7 @@ docker compose run --rm k6 run /scripts/minifacebook.js
 ```
 
 ## Article
-This is the accompanying source code for the following article. Please read for a detailed breakdown of the code and how K6, Grafana and InfluxDB work together using Docker Compose:
-
-https://medium.com/swlh/beautiful-load-testing-with-k6-and-docker-compose-4454edb3a2e3
+This is the accompanying source code for [this article](https://medium.com/swlh/beautiful-load-testing-with-k6-and-docker-compose-4454edb3a2e3). Please read for a detailed breakdown of the code and how K6, Grafana and InfluxDB work together using Docker Compose.
 
 ## Dashboards
 The dashboard in `/dashboards` is adapted from [this k6 dashboard](https://grafana.com/grafana/dashboards/2587).
