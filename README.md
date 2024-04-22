@@ -28,4 +28,4 @@ The dashboard in `/dashboards` is adapted from [this k6 dashboard](https://grafa
 
 There are only two small modifications:
 * The data source is configured to use the docker created InfluxDB data source
-* The time period is set to now-15m, which I feel is a better view for most tests
+* The time period is set to now-5m, which I feel is a better view for most tests
