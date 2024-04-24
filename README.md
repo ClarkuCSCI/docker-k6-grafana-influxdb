@@ -18,6 +18,8 @@ Finally, run the load testing script:
 ```
 docker compose run --rm k6 run /scripts/minifacebook.js
 ```
+Load testing should run without warnings. For example, if you see "Request Failed" warnings, k6 may be unable to communicate with the web app. In this case, check the configuration of the external django network.
+
 As the script runs, results will appear in the graph dashboard.
 
 ## Article
