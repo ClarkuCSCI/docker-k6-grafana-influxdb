@@ -28,6 +28,7 @@ This is the accompanying source code for [this article](https://medium.com/swlh/
 ## Dashboards
 The dashboard in `/dashboards` is adapted from [this k6 dashboard](https://grafana.com/grafana/dashboards/2587).
 
-There are only two small modifications:
-* The data source is configured to use the docker created InfluxDB data source
+There are several modifications:
+* The data source is configured to use the Docker-created InfluxDB data source
 * The time period is set to now-5m, which I feel is a better view for most tests
+* Intervals are updated for compatibility with the latest version of Grafana
